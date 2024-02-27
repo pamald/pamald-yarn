@@ -1,0 +1,9 @@
+parameters:
+	typeAliases:
+		pamald-yarn-dependency-type: '"dependencies"|"optionalDependencies"|"peerDependencies"|"devDependencies"'
+		pamald-yarn-relationship: '''
+			array{
+				type: pamald-yarn-dependency-type,
+				versionConstraint: string,
+			}
+		'''

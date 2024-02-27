@@ -1,0 +1,21 @@
+parameters:
+	typeAliases:
+		php-executable: '''
+			array{
+				enabled: bool,
+				command: string,
+				envVars?: array<string, ?string>,
+			}
+		'''
+		dummy-package-values: '''
+			array{
+				name: string,
+				type?: null|string,
+				versionString?: null|string,
+				typeOfRelationship?: null|string,
+				isDirectDependency?: null|bool,
+				homepage?: null|string,
+				vcsInfo?: null|array<string, mixed>,
+				issueTracker?: null|array<string, mixed>,
+			}
+		'''

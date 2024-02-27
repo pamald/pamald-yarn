@@ -1,0 +1,33 @@
+<phpunit
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+    cacheDirectory="./.cache/phpunit/"
+    colors="true">
+
+    <source>
+        <include>
+            <directory>./src/</directory>
+        </include>
+    </source>
+
+    <testsuites>
+        <testsuite name="Unit">
+            <directory>./tests/src/Unit/</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage>
+        <report>
+            <html outputDirectory="./reports/human/coverage/html/" />
+
+            <!--<xml outputDirectory="./reports/machine/coverage/xml" />-->
+            <!--<php outputFile="./reports/machine/coverage.php" />-->
+            <clover outputFile="./reports/machine/coverage.clover.xml" />
+        </report>
+    </coverage>
+
+    <logging>
+        <junit outputFile="./reports/machine/result.junit.xml" />
+        <testdoxHtml outputFile="./reports/human/result.html" />
+    </logging>
+</phpunit>
