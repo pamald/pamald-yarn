@@ -2,7 +2,6 @@
 /.cache/
 /reports/
 
-
 ### Composer.
 /vendor/
 /pamald-pamald-yarn-*.tar
@@ -17,22 +16,17 @@
 /composer.*.json
 /composer.*.lock
 
+### PhpUnit.
+/phpunit.xml
 
 ### sweetchuck/git-hooks.
 /.git-hooks.local
 
-
 ### Robo.
 /robo.yml
-
 
 ### PHPCS.
 /phpcs.xml
 
-
 ### PHPStan.
 /phpstan.neon
-
-
-### PHPUnit.
-/phpunit.xml

@@ -67,7 +67,7 @@ commands:
                 run:
                     name: 'Composer - install'
                     command: >
-                        composer install --ansi --no-progress
+                        composer install --no-progress --ansi
 
             -
                 save_cache:
@@ -91,17 +91,17 @@ commands:
         steps:
             -
                 run:
-                    name: 'Test - Unit'
+                    name: 'Test - unit'
                     command: |
-                        "$(composer config 'bin-dir')/robo" --ansi test 'Unit'
+                        "$(composer config 'bin-dir')/robo" --ansi test 'unit'
             -
                 codecov/upload:
                     flags: 'unit'
-                    dir: './reports/machine/'
+                    dir: './reports/machine/coverage/'
             -
                 store_test_results:
                     name: 'Store unit test results'
-                    path: './reports/machine/result.junit.xml'
+                    path: './reports/machine/result/junit.xml'
 
 jobs:
     build:
